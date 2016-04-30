@@ -4,10 +4,10 @@ require 'twitter'
 while true
 begin
     config = {
-        :consumer_key => "jqntMvc9fDvunCtysHCqxm2WF",
-        :consumer_secret => "6klAKtqA4DVR6EYIv2UCdWfUQuaPP2oH4x45R0BcfcWr81k4U7",
-        :access_token => "45805555-re0887EiW6oiV86DPZsKQDo1433dXxqZsq2N74yyz",
-        :access_token_secret => "e498dduxRYTC0OzAbnJNo8Q5GZjcFJOmqfHgwVsgpThHY",
+        :consumer_key => "CONSUMER_KEY",
+        :consumer_secret => "CONSUMER_SECRET",
+        :access_token => "ACCESS_TOKEN",
+        :access_token_secret => "ACCESS_TOKEN_SECRET",
     }
 
     #rClient = Twitter::REST::Client.new config
