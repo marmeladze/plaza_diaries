@@ -13,7 +13,7 @@ begin
     #rClient = Twitter::REST::Client.new config
     sClient = Twitter::Streaming::Client.new(config)
 
-    topics = ['#plazadili', 'plaza']
+    topics = ['#plazadili', 'plazadili']
     sClient.filter(:track => topics.join(',')) do |tweet|
         if tweet.is_a?(Twitter::Tweet)
           puts "#{tweet.user.screen_name}: #{tweet.text}"
