@@ -1,6 +1,5 @@
 require 'twitter'
 
-
 while true
 begin
     config = {
@@ -10,15 +9,12 @@ begin
         :access_token_secret => "ACCESS_TOKEN_SECRET",
     }
 
-    #rClient = Twitter::REST::Client.new config
     sClient = Twitter::Streaming::Client.new(config)
 
     topics = ['#plazadili', 'plazadili']
     sClient.filter(:track => topics.join(',')) do |tweet|
         if tweet.is_a?(Twitter::Tweet)
           puts "#{tweet.user.screen_name}: #{tweet.text}"
-          #rClient.fav tweet
-		  #rClient.retweet tweet          
         end
     end
 rescue Exception => e
